@@ -34,12 +34,22 @@
   ],
 
   // python config
-  "python.jediEnabled": false,
+  // format prompt: `pip install flake8`
+  //"python.jediEnabled": true,
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
-  "python.formatting.provider": "autopep8",
-  "python.linting.flake8Args": ["--ignore=E501,W503,W504,F401"],
+  "python.linting.flake8Args": ["--max-line-length=120", "--ignore=E124,E126,W504,F401"],
+
+  // format content: `pip install yapf`
+  "python.formatting.provider": "yapf",
+  "python.formatting.yapfArgs": ["--style={based_on_style: google, column_limit: 120}"],
+
+  // format header
+  "python.sortImports.path": "isort",
+  "pyright.enable": true,
+  //"pyright.organizeimports.provider": "isort",
+  //"pyright.organizeimports.provider": "pyright",
 
   // clangd
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd"

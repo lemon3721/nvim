@@ -40,8 +40,8 @@ imap <C-l> <C-w>l
 " tnoremap <C-S-n> <C-\><C-n>
 
 " Use alt + hjkl to resize windows
-nnoremap <silent> <M-j>    :resize -5<CR>
-nnoremap <silent> <M-k>    :resize +5<CR>
+"nnoremap <silent> <M-j>    :resize -5<CR>
+"nnoremap <silent> <M-k>    :resize +5<CR>
 nnoremap <silent> <M-h>    :vertical resize -2<CR>
 nnoremap <silent> <M-l>    :vertical resize +2<CR>
 

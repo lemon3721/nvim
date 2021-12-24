@@ -41,6 +41,8 @@ Plug 'neoclide/jsonc.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdcommenter'
+Plug 'fannheyward/coc-pyright'
+Plug 'doi/fileheadercomment'
 " Plug 'luochen1990/rainbow'
 " Plug 'neovim/nvim-lspconfig'
 call plug#end()
@@ -77,3 +79,5 @@ source $INITHOME/config/plug/nerdtree.vim
 " source $INITHOME/config/plug/rainbow.vim
 " luafile $INITHOME/config/plug/nvim-lspconfig.lua
 
+" auto sortImports for python headers
+autocmd BufWritePre *.py silent! :call CocAction('runCommand', 'python.sortImports')
