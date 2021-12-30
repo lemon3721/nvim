@@ -56,7 +56,7 @@
   // format header
   "pyright.organizeimports.provider": "isort",
   "python.sortImports.path": "isort",
-  "python.sortImports.args": ["-rc", "--atomic"],
+  "python.sortImports.args": ["--balanced", "--multi-line=0", "--line-length=120"],
 
   // clangd
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd"
