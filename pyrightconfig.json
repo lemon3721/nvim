@@ -1,0 +1,7 @@
+{
+  "reportGeneralTypeIssues": "warning",
+  "reportOptionalMemberAccess": "warning",
+  "reportMissingImports": "warning",
+  "reportOptionalSubscript": "warning",
+  "reportUnboundVariable": "warning"
+}

@@ -81,3 +81,12 @@ source $INITHOME/config/plug/nerdtree.vim
 
 " auto sortImports for python headers
 autocmd BufWritePre *.py silent! :call CocAction('runCommand', 'python.sortImports')
+" Note: Pyright may not work as expected if can't detect project root correctly, check #521 and Using workspaceFolders in coc.nvim.
+autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json']
+
+"for use fzf:
+"sudo apt-get install silversearcher-ag
+nnoremap <c-p> :Files<CR>
+nnoremap <c-g> :Ag<CR>
+
+"let g:python3_host_prog='~/.conda/envs/prediction_paper_38/bin/python'

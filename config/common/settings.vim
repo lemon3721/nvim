@@ -25,11 +25,11 @@ set shiftwidth=2                        " Change the number of space characters 
 set laststatus=2                        " Always display the status line
 set background=dark                     " Set background dark, seems only needed for vim
 
-if $TMUX != ""                          " Show tabline only not in tmux
-  set showtabline=0                       
-else
-  set showtabline=2
-endif
+" if $TMUX != ""                          " Show tabline only not in tmux
+"   set showtabline=0
+" else
+"   set showtabline=2
+" endif
 
 set shortmess+=c                        " This is recommended by coc. Don't pass messages to |ins-completion-menu|.
 set signcolumn=yes                      " This is recommended by coc. Always show the signcolumn, or it will blink.
