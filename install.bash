@@ -152,7 +152,9 @@ fi
 echo Installing silversearcher-ag...
 sudo apt-get install silversearcher-ag
 
-pip install isort
+# python must be python3, and isort version should >= 5.9.3
+# isort lower than 5.9.3, will cause a bug: when exec sortImports it will create a new file named as *.py.xxxxxx.py
+pip3 install isort==5.9.3
 
 echo ""
 echo Install done!!!
