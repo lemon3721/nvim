@@ -147,6 +147,13 @@ else
   echo FiraCode font installed done!!!
 fi
 
+
+# Install silversearcher-ag
+echo Installing silversearcher-ag...
+sudo apt-get install silversearcher-ag
+
+pip install isort
+
 echo ""
 echo Install done!!!
 
