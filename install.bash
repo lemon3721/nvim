@@ -42,7 +42,8 @@ if [ ! ${force} ] && (nvim -v &>> /dev/null); then
 else
   echo Installing neovim...
   nvim_image=nvim.appimage
-  nvim_image_path=https://github.com/neovim/neovim/releases/download/nightly/
+  # nvim_image_path=https://github.com/neovim/neovim/releases/download/nightly/
+  nvim_image_path=https://github.com/neovim/neovim/releases/download/v0.6.1/
   wget -c -O /tmp/${nvim_image} ${nvim_image_path}/${nvim_image} || { echo Neovim install failed!!!;  exit 1; }
   sudo mv -f /tmp/${nvim_image} /usr/bin \
     && sudo chmod +x /usr/bin/${nvim_image} \
@@ -70,7 +71,8 @@ if [ ! ${force} ] && (ranger --version &>> /dev/null); then
   echo Ranger is already installed
 else
   echo Installing ranger...
-  pip3 install ranger-fm || { echo Ranger install failed!!!;  exit 1; }
+  # pip3 install ranger-fm || { echo Ranger install failed!!!;  exit 1; }
+  pip3 install ranger-fm==1.9.3 || { echo Ranger install failed!!!;  exit 1; }
   echo Ranger install done!!!
 fi
 
